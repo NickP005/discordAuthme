@@ -1,0 +1,18 @@
+name: discordAuthme
+main: discordAuthme.Main
+version: 1.2
+depend:
+    - AuthMe
+commands:
+  link:
+    description: Link authme to your discord account
+    usage: '/link name#0000'
+  unlink:
+    description: Link authme to your discord account
+    usage: '/unlink'
+  confirm:
+    description: Confirm your discord account
+    usage: '/confirm 123456'
+  recover:
+    description: Recover your account
+    usage: '/recover name#0000'

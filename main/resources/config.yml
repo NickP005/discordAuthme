@@ -1,0 +1,67 @@
+#############################
+# Plugin created by NickP05 #
+#############################
+
+#Do I have to send a message after the login if the player
+#hasn't linked his/her account? (for the message go to Messages-->notLinked)
+rememberToLink: true
+
+#Theese are the informations for the clickable and hoverable %discordUrl
+discordServerMessage: "click here Discord Server"
+discordServerUrl: "https://discord.gg/u5vYznP"
+hoverUrlMessage: "&6Join the xx Discord Server!"
+
+#The discord bot needs to stay in the same guild of a player
+#to send the message. Enter here you'r discord Guild ID
+#Discord--> server settings --> widget --> Server ID
+guildID: "000000000000000000"
+
+##############################################################################
+#              HOW TO ADD THE BOT TO YOUR GUILD/SERVER                       #
+# After you created the bot (see below paragraph)                            #
+# - go on "OAuth2" (in the left screen menu)                                 #
+# - Go on the div "Scopes" and select bot                                    #
+# - In the div down called "BOT PERMISSIONS" select                          #
+#   ° View server insights                                                   #
+#   ° Send messages                                                          #
+#   ° Read message history                                                   #
+# - in the "Scopes" div has been created a link. Copy that on your browser   #
+# - select what server you want the bot to be added                          #
+# - then click "authorize"                                                   #
+##############################################################################
+
+#Discord bot TOKEN
+# - Go to this page 
+# https://discord.com/developers/applications
+# then if you have already a bot paste it here, probably you won't so:
+# - Click "New Application" on the top right corner
+# - Enter your private bot name (means only you see that name)
+# - Then there's a menu on the left. Click "Bot"
+# - Then click "Add Bot" (Yes do it)
+# - Then do "click to reveal the token"
+# - copy that token and paste it below (botToken:)
+botToken: "abcdefghilmnopqrstuvzABCDEFGHILMNOPQRSTUVZ123456789.abcdefg"
+
+messages:
+#For the messages are the special chars
+#&2 Green; &4 Red; &6Gold; &f Reset; &l Bold; &v Light Purple; &vd Dark Purple; &g Gray; &a Aqua
+#Here's the internal placeholders 
+# %playername: returns the player name (not the nick)
+# %discordUrl: return an clickable text configurable hover here
+# %discordPIN: returns the current discord pin to link the account
+# %discordRecoverPIN: returns the pin for doing /recover PIN
+   notLinked: "&2Link your &v&lDiscord Account&2 to in a future &6recover \n&2your password. &g/link name#0000"
+   inGameSuccessSentLinkMessage: "&2Well done %playername, I've just sent you the code"
+   nonMemberOfDiscordServer: "&2You have to be member of our %discordUrl"
+   minimumRequestDelay: "&4Please wait at least twenty minutes between link requests."
+   minimumRecoverDelay: "&4Please wait at least twelve minutes between requests. \n&4We've sure your message has arrived"
+   failedGetAccountId: "&4The account you entered was not found. \n&4Are you member of our&v&l %discordUrl &4?"
+   accountAlreadyLinked: "&4This account has been already linked. \n&4You can unlink it doing: &g/unlink"
+   successfullyLinked: "&2The account has been successfully linked!"
+   successfullyUnLinked: "&2The account has been successfully unlinked!"
+   accountNeverLinked: "&4This account was never linked, sorry."
+   sentAnRecoverPassword: "&2We've just sent to your discord your recovery command"
+   discordConfirmMessage: "Hi %playername!, here's your code:"
+   discordConfirmMessage2: "/confirm %discordPIN"
+   discordRecoverMessage: "A recover password request was sent. If were you do"
+   discordRecoverMessage2: "/recover %discordRecoverPIN"
